@@ -8,7 +8,7 @@ owner=$5
 apiPath="OAS3.0"
 
 
-for file in ${apiPath}/*.yaml; do
+for file in ${apiPath}/core-metadata.yaml; do
     apiName="$(echo $file | cut -d "/" -f 2 | cut -d "." -f 1)"
     echo "API_Name:"$apiName
     apiContent="$(cat ${apiPath}/${apiName}.yaml)"
